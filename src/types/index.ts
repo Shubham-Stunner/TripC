@@ -1,5 +1,0 @@
-export type TripStatus='active'|'completed';export type ExpenseCategory='Travelling'|'Tickets'|'Food'|'Activities'|'Hotel'|'Shopping'|'Other';
-export interface User{id:string;name:string;email:string;avatarUrl?:string} export interface Trip{id:string;destination:string;country:string;startDate:string;endDate:string;status:TripStatus;memberIds:string[];createdBy:string}
-export interface Member{id:string;tripId:string;name:string;isCreator?:boolean} export interface Expense{id:string;tripId:string;title:string;amount:number;category:ExpenseCategory;paidBy:string;date:string;notes?:string;splitMemberIds:string[]}
-export interface Settlement{fromMemberId:string;toMemberId:string;amount:number} export interface MemberBalance{memberId:string;paid:number;share:number;balance:number}
-export interface TripSummary{tripId:string;totalSpent:number;perPerson:number;expenseCount:number;unsettledTotal:number;categoryTotals:Record<ExpenseCategory,number>;memberBalances:MemberBalance[];settlements:Settlement[]}
