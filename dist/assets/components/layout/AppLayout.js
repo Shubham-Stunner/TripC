@@ -1,0 +1,4 @@
+import { el } from '../ui';
+import { currentSession } from '../../lib/session';
+import { initials } from '../../utils/format';
+export function layout(content) { const path = location.pathname; return el('div', { class: 'app' }, el('header', { class: 'top' }, el('nav', { class: 'nav', 'aria-label': 'Primary' }, el('a', { class: 'brand', href: '/' }, 'Trip', el('span', {}, 'C')), el('div', { class: 'links' }, ...['/', '/trips'].map(h => el('a', { href: h, class: path === h ? 'active' : '' }, h === '/' ? 'Dashboard' : 'Trips'))), el('button', { class: 'btn secondary mobile', onClick: () => location.href = '/trips/new' }, 'Start'), el('div', { class: 'profile' }, el('button', { class: 'btn ghost', 'aria-label': 'Notifications' }, '🔔'), el('div', { class: 'avatar', 'aria-label': 'Profile placeholder' }, initials(currentSession.user.name)), el('span', { class: 'muted' }, currentSession.user.name)))), el('main', { class: 'container' }, content)); }
