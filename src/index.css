@@ -1,0 +1,57 @@
+:root {
+  color: #213547;
+  background-color: #f7f7fb;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.landing {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 2rem;
+}
+
+.hero {
+  max-width: 36rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #1f4f8f;
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 1;
+}
+
+.hero h2 {
+  margin: 1rem 0 0;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.hero p {
+  margin: 1rem 0 0;
+  color: #586174;
+  font-size: 1.25rem;
+}
