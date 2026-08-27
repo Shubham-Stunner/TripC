@@ -1,1 +1,0 @@
-export const locationsApi = { async search(q) { const all = ['Goa, India', 'Manali, India', 'Jaipur, India', 'Bali, Indonesia', 'Bangkok, Thailand'].map(label => { const [city, country] = label.split(', '); return { city, country, label }; }); return all.filter(x => x.label.toLowerCase().includes(q.toLowerCase())).slice(0, 5); } };
