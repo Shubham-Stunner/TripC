@@ -1,13 +1,1 @@
-export function Logo() {
-  return (
-    <a className="logo" href="#main-content" aria-label="TripC dashboard">
-      <span className="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none">
-          <path d="M6 22.5 15.8 5l10.2 17.5-10.1-5.3L6 22.5Z" fill="currentColor" />
-          <path d="m15.8 5 .1 12.2L26 22.5 15.8 5Z" fill="currentColor" opacity=".36" />
-        </svg>
-      </span>
-      <span>Trip<span>C</span></span>
-    </a>
-  )
-}
+export function Logo({ onDashboard }: { onDashboard: () => void }) { return <button className="logo" type="button" onClick={onDashboard} aria-label="TripC dashboard"><span className="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M6 22.5 15.8 5l10.2 17.5-10.1-5.3L6 22.5Z" fill="currentColor" /><path d="m15.8 5 .1 12.2L26 22.5 15.8 5Z" fill="currentColor" opacity=".36" /></svg></span><span>Trip<span>C</span></span></button> }

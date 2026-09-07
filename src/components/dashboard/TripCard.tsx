@@ -1,0 +1,3 @@
+import type { Trip } from '../../types/trip'
+import { formatDuration, formatTripDate, getTripDuration } from '../../utils/date'
+export function TripCard({ trip }: { trip: Trip }) { const duration = getTripDuration(trip.startDate, trip.endDate); return <article className="trip-card"><div className="trip-card-heading"><div><p className="eyebrow">{trip.status}</p><h3>{trip.destination}</h3></div><span className="status-pill">Active</span></div><dl className="trip-card-details"><div><dt>Start date</dt><dd>{formatTripDate(trip.startDate)}</dd></div><div><dt>End date</dt><dd>{formatTripDate(trip.endDate)}</dd></div><div><dt>Duration</dt><dd>{formatDuration(duration)}</dd></div></dl></article> }
